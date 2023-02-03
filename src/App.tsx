@@ -1,23 +1,16 @@
 import "./App.css";
-import Location from "./Location";
-import { AppShell, Navbar } from "@mantine/core";
+import Project from "./Project";
 import { Route, Routes } from "react-router-dom";
 import Root from "./Root";
+import NewProject from "./NewProject";
 
 function App() {
   return (
-    <AppShell
-      navbar={
-        <Navbar width={{ base: 200 }} height="100vh">
-          {/* Navbar Content */}
-        </Navbar>
-      }
-    >
-      <Routes>
-        <Route path="/" element={<Root />} />
-        <Route path="/locations/:id" element={<Location />} />
-      </Routes>
-    </AppShell>
+    <Routes>
+      <Route path="/projects/new" element={<NewProject />} />
+      <Route path="/projects/:id" element={<Project />} />
+      <Route path="/" element={<Root />} />
+    </Routes>
   );
 }
 

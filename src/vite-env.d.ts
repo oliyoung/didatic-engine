@@ -1,14 +1,14 @@
 /// <reference types="vite/client" />
 interface Location {
-  id: String;
-  name: String;
+  id: string;
+  name: string;
 }
 interface Project {
-  id: String;
-  due_at: String;
-  name: String;
-  description: String;
+  id: string;
+  due_at: string;
+  name: string;
+  description: string;
   location: Location;
-  cost_cents: Number;
-  budgeted: Boolean;
+  cost_cents: number;
+  budgeted: boolean;
 }
